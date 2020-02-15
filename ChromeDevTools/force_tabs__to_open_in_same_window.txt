@@ -1,0 +1,12 @@
+//PASTE IN DEV TOOLS CONSOLE.
+
+[].forEach.call(document.querySelectorAll('a'),
+    function(link){
+        if(link.attributes.target) {
+            link.attributes.target.value = '_self';
+        }
+    });
+
+window.open = function(url) {
+    location.href = url;
+};
